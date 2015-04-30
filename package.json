@@ -1,44 +1,69 @@
 {
-  "name": "thebroonline.com",
-  "version": "0.1.0",
-  "description": "Fun project for tracking the use of brown sauce at chip shops",
-  "homepage": "http://www.thebroonline.com",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/neocotic/thebroonline.com/issues"
-  },
-  "author": {
-    "name": "Alasdair Mercer",
-    "email": "mercer.alasdair@gmail.com",
-    "url": "http://neocotic.com"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/neocotic/thebroonline.com/raw/master/LICENSE.md"
+    "name": "thebroonlinecom",
+    "version": "0.1.0",
+    "description": "Fun project for tracking the use of brown sauce at chip shops",
+    "homepage": "http://www.thebroonline.com",
+    "private": true,
+    "bugs": {
+        "url": "https://github.com/neocotic/thebroonline.com/issues"
+    },
+    "author": {
+        "name": "Alasdair Mercer",
+        "email": "mercer.alasdair@gmail.com",
+        "url": "http://neocotic.com"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/neocotic/thebroonline.com/raw/master/LICENSE.md"
+        }
+    ],
+    "keywords": [
+        "brown",
+        "broon",
+        "sauce",
+        "line",
+        "map"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/neocotic/thebroonline.com.git"
+    },
+    "dependencies": {
+        "adaro": "^0.1.5",
+        "dustjs-helpers": "^1.2.0",
+        "dustjs-linkedin": "^2.3.6",
+        "engine-munger": "^0.2.0",
+        "express": "^4.3.0",
+        "kraken-devtools": "^1.0.0",
+        "kraken-js": "^1.0.1",
+        "less": "^1.6.1",
+        "localizr": "^0.1.0",
+        "requirejs": "^2.1.11"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.1",
+        "grunt-config-dir": "^0.3.2",
+        "grunt-contrib-clean": "^0.5.0",
+        "grunt-contrib-jshint": "^0.10.0",
+        "grunt-contrib-less": "^0.9.0",
+        "grunt-contrib-requirejs": "^0.4.3",
+        "grunt-copy-to": "0.0.10",
+        "grunt-dustjs": "^1.2.0",
+        "grunt-localizr": "^0.1.0",
+        "grunt-mocha-cli": "^1.5.0",
+        "mocha": "^1.18.0",
+        "supertest": "^0.9.0"
+    },
+    "generator-kraken": {
+        "version": "1.1.2",
+        "template": "dustjs",
+        "css": "less",
+        "js": "requirejs",
+        "task": "grunt"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "grunt test"
     }
-  ],
-  "keywords": [
-    "brown",
-    "broon",
-    "sauce",
-    "line",
-    "map"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/neocotic/thebroonline.com.git"
-  },
-  "devDependencies": {
-    "gulp": "3.8.11",
-    "grunt-bower-task": "0.4.0",
-    "grunt-contrib-connect": "0.9.0",
-    "gulp-jshint": "1.10.0",
-    "gulp-uglify": "1.2.0",
-    "grunt-contrib-require": "0.4.4",
-    "grunt-contrib-watch": "0.6.1"
-  },
-  "scripts": {
-    "test": "gulp test"
-  }
 }

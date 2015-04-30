@@ -11,14 +11,14 @@ Ensure that all files confirm to the coding standards. This can be done easily v
 # install/update package dependencies
 $ npm install
 # run test suite
-$ gulp test
+$ grunt test
 ```
 
 You will need to have [node.js][3] for this, but you should also need to install (if you haven't done so already) the
-[gulp][4] command-line tool:
+[Grunt][4] command-line tool:
 
 ``` bash
-$ npm install -g gulp
+$ npm install -g grunt
 ```
 
 Use the same coding style as the rest of the [code base][0].
@@ -32,5 +32,5 @@ others.
 [1]: https://github.com/neocotic/thebroonline.com/issues
 [2]: https://github.com/neocotic/thebroonline.com/issues/new
 [3]: http://nodejs.org
-[4]: http://gulpjs.com
+[4]: http://gruntjs.com
 [5]: https://github.com/neocotic/thebroonline.com/blob/master/AUTHORS.md
