@@ -29,7 +29,7 @@ describe('/', function() {
             .get('/')
             .expect(200)
             .expect('Content-Type', /html/)
-            .expect(/Hello, /)
+            .expect(/Coming very soon/)
             .end(function(err, res) {
                 done(err);
             });

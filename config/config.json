@@ -1,4 +1,5 @@
 {
+    "app": "import:./app",
     "express": {
         "view cache": false,
         "view engine": "js",
@@ -40,6 +41,13 @@
                         "directory": "path:./controllers"
                     }
                 ]
+            }
+        },
+        "config": {
+            "priority": 95,
+            "enabled": true,
+            "module": {
+                "name": "path:./lib/middleware/config"
             }
         },
         "expressView": {

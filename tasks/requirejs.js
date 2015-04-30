@@ -13,7 +13,11 @@ module.exports = function requirejs(grunt) {
                     {
                         name: 'app'
                     }
-                ]
+                ],
+                paths: {
+                    'bootstrap': '../components/bootstrap/dist/js/bootstrap',
+                    'jquery': '../components/jquery/dist/jquery'
+                }
             }
         }
     };

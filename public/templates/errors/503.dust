@@ -1,6 +1,14 @@
-{>"layouts/master" /}
+{>"layouts/cover"/}
 
-{<body}
-    <h1>{@pre type="content" key="header"/}</h1>
-    <p>{@pre type="content" key="description"/}</p>
-{/body}
+{<title}
+    {@pre type="content" key="title"/}
+    &middot;
+{/title}
+
+{<heading}
+    {@pre type="content" key="header"/}
+{/heading}
+
+{<content}
+    <p class="lead">{@pre type="content" key="description"/}</p>
+{/content}

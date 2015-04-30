@@ -6,6 +6,7 @@ module.exports = function(grunt) {
         configDir: require('path').resolve('tasks')
     });
 
+    grunt.registerTask('default', ['build', 'mochacli']);
     grunt.registerTask('build', ['jshint', 'less', 'requirejs', 'i18n', 'copyto']);
     grunt.registerTask('test', ['jshint', 'mochacli']);
 
