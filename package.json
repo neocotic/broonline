@@ -1,0 +1,44 @@
+{
+  "name": "thebroonline.com",
+  "version": "0.1.0",
+  "description": "Fun project for tracking the use of brown sauce at chip shops",
+  "homepage": "http://www.thebroonline.com",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/neocotic/thebroonline.com/issues"
+  },
+  "author": {
+    "name": "Alasdair Mercer",
+    "email": "mercer.alasdair@gmail.com",
+    "url": "http://neocotic.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/neocotic/thebroonline.com/raw/master/LICENSE.md"
+    }
+  ],
+  "keywords": [
+    "brown",
+    "broon",
+    "sauce",
+    "line",
+    "map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neocotic/thebroonline.com.git"
+  },
+  "devDependencies": {
+    "gulp": "3.8.11",
+    "grunt-bower-task": "0.4.0",
+    "grunt-contrib-connect": "0.9.0",
+    "gulp-jshint": "1.10.0",
+    "gulp-uglify": "1.2.0",
+    "grunt-contrib-require": "0.4.4",
+    "grunt-contrib-watch": "0.6.1"
+  },
+  "scripts": {
+    "test": "gulp test"
+  }
+}
