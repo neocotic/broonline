@@ -32,7 +32,7 @@
     "dependencies": {
         "adaro": "^0.1.5",
         "dustjs-helpers": "^1.2.0",
-        "dustjs-linkedin": "^2.3.6",
+        "dustjs-linkedin": ">=2.3.6 <=2.6.0",
         "engine-munger": "^0.2.0",
         "express": "^4.3.0",
         "kraken-devtools": "^1.0.0",
