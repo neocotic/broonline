@@ -8,5 +8,6 @@
         "line",
         "map"
     ],
-    "author": "Alasdair Mercer"
+    "author": "Alasdair Mercer",
+    "analyticsId": "env:GOOGLE_ANALYTICS_ID"
 }
