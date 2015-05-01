@@ -10,22 +10,23 @@ Ensure that all files confirm to the coding standards. This can be done easily v
 ``` bash
 # install/update package dependencies
 $ npm install
+$ bower install
 # run test suite
 $ grunt test
 ```
 
 You will need to have [node.js][3] for this, but you should also need to install (if you haven't done so already) the
-[Grunt][4] command-line tool:
+[Grunt][4] and [Bower][5] command-line tools:
 
 ``` bash
-$ npm install -g grunt
+$ npm install -g grunt-cli bower
 ```
 
 Use the same coding style as the rest of the [code base][0].
 
 All pull requests should be made to the `develop` branch.
 
-Don't forget to add your details to the list of [AUTHORS.md][5] if you want your contribution to be recognized by
+Don't forget to add your details to the list of [AUTHORS.md][6] if you want your contribution to be recognized by
 others.
 
 [0]: https://github.com/neocotic/thebroonline.com
@@ -33,4 +34,5 @@ others.
 [2]: https://github.com/neocotic/thebroonline.com/issues/new
 [3]: http://nodejs.org
 [4]: http://gruntjs.com
-[5]: https://github.com/neocotic/thebroonline.com/blob/master/AUTHORS.md
+[5]: http://bower.io
+[6]: https://github.com/neocotic/thebroonline.com/blob/master/AUTHORS.md

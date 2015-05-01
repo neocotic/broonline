@@ -1,14 +1,11 @@
 {>"layouts/cover"/}
 
 {<title}
-    {@pre type="content" key="title"/}
-    &middot;
+    {@pre type="content" key="title"/} &middot;
 {/title}
 
-{<heading}
-    {@pre type="content" key="header"/}
-{/heading}
-
 {<content}
+    <h1 class="cover-heading">{@pre type="content" key="header"/}</h1>
+
     <p class="lead">{@pre type="content" key="description"/}</p>
 {/content}

@@ -1,6 +1,0 @@
-
-app.js
-----------------
-jquery.js
-bootstrap.js
-app.js

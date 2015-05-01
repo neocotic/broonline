@@ -1,9 +1,9 @@
 {>"layouts/cover"/}
 
-{<heading}
-    {@pre type="content" key="heading"/}
-{/heading}
-
 {<content}
+    <img class="broon-line-logo" src="/img/logo.png" alt="{@pre type="content" key="logo.alt"/}">
+
+    <h1 class="cover-heading">{@pre type="content" key="heading"/}</h1>
+
     <p class="lead">{@pre type="content" key="description"/}</p>
 {/content}

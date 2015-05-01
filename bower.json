@@ -27,8 +27,11 @@
         "url": "git://github.com/neocotic/thebroonline.com.git"
     },
     "dependencies": {
-        "bootstrap": "^3.3.4",
-        "html5shiv": "^3.7.2",
-        "jquery": "^1.11.2"
+        "bootstrap": "3.3.4",
+        "dustjs-linkedin": "2.6.2",
+        "dustjs-linkedin-helpers": "1.6.3",
+        "html5shiv": "3.7.2",
+        "jquery": "1.11.2",
+        "requirejs": "2.1.17"
     }
 }
