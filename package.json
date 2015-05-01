@@ -43,6 +43,7 @@
     },
     "devDependencies": {
         "grunt": "^0.4.5",
+        "grunt-cli": "^0.1.13",
         "grunt-config-dir": "^0.3.2",
         "grunt-contrib-clean": "^0.6.0",
         "grunt-contrib-jshint": "^0.11.2",
@@ -64,6 +65,8 @@
     },
     "main": "index.js",
     "scripts": {
+        "postinstall": "bower install && grunt build",
+        "start": "node index.js",
         "test": "grunt test"
     }
 }
