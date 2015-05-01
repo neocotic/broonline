@@ -40,7 +40,9 @@
         "less": "1.7.5",
         "localizr": "0.1.6",
         "newrelic": "1.18.4",
-        "requirejs": "2.1.17",
+        "requirejs": "2.1.17"
+    },
+    "devDependencies": {
         "bower": "^1.4.1",
         "grunt": "^0.4.5",
         "grunt-cli": "^0.1.13",
@@ -65,12 +67,13 @@
     },
     "main": "index.js",
     "scripts": {
-        "build": "",
-        "postinstall": "bower install && grunt build",
+        "build": "bower install && grunt build",
+        "postinstall": "npm run build",
         "start": "node index.js",
         "test": "grunt test"
     },
-    "engines" : {
-        "node" : "^0.10.35"
+    "engines": {
+        "node": "0.12.x",
+        "npm": "^2.1.0"
     }
 }
