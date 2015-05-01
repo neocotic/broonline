@@ -2,4 +2,5 @@
 public/components/
 
 node_modules/
+.env
 *.log
