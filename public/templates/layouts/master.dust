@@ -34,7 +34,7 @@
 
             <p class="navbar-text navbar-right navbar-social-links">
                 <a href="https://twitter.com/intent/tweet?status={host|uc}" class="navbar-link navbar-link-twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?url={host|uc}" class="navbar-link navbar-link-facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={host|uc}" class="navbar-link navbar-link-facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
                 <a href="https://plus.google.com/share?url={host|uc}" class="navbar-link navbar-link-google-plus"><i class="fa fa-google-plus-square fa-2x"></i></a>
                 <a href="https://www.stumbleupon.com/submit?url={host|uc}" class="navbar-link navbar-link-stumbleupon"><i class="fa fa-stumbleupon-circle fa-2x"></i></a>
                 <a href="https://pinterest.com/pin/create/bookmarklet/?is_video=false&url={host|uc}" class="navbar-link navbar-link-pinterest"><i class="fa fa-pinterest fa-2x"></i></a>
