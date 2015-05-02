@@ -1,10 +1,14 @@
 html,
-body {
+body,
+main {
+    width: 100%;
     height: 100%;
-    background-color: @brown;
 }
+
 body {
-    color: @white;
-    text-align: center;
-    text-shadow: 0 1px 3px fade(@black, 50%);
+    padding: (@navbar-height + @navbar-border-width) 0 0;
+}
+
+main {
+    background-color: @gray-lighter;
 }

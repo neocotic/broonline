@@ -1,0 +1,77 @@
+.navbar {
+    font-family: 'Lobster', cursive;
+    height: (@navbar-height + @navbar-border-width);
+    border-bottom-width: @navbar-border-width;
+}
+
+.navbar-default .navbar-brand {
+    position: relative;
+    background-color: @navbar-default-brand-bg;
+    font-size: @navbar-default-brand-size;
+    .transition(padding-left .6s ease);
+
+    .arrow-right {
+        position: absolute;
+        right: -(@navbar-height / 2);
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: (@navbar-height / 2) solid transparent;
+        border-bottom: (@navbar-height / 2) solid transparent;
+        border-left: (@navbar-height / 2) solid @navbar-default-brand-bg;
+    }
+
+    &:focus,
+    &:hover {
+        padding-left: 100px;
+
+        .arrow-right {
+            border-left-color: @navbar-default-brand-hover-bg;
+        }
+    }
+}
+
+.navbar-social-links {
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @media (min-width: @screen-sm-min) {
+        display: block;
+        margin-right: 15px;
+    }
+
+    .navbar-link {
+        padding-left: 10px;
+    }
+
+    .navbar-link-facebook:focus,
+    .navbar-link-facebook:hover {
+        color: @social-facebook;
+    }
+
+    .navbar-link-github:focus,
+    .navbar-link-github:hover {
+        color: @social-github;
+    }
+
+    .navbar-link-google-plus:focus,
+    .navbar-link-google-plus:hover {
+        color: @social-google-plus;
+    }
+
+    .navbar-link-pinterest:focus,
+    .navbar-link-pinterest:hover {
+        color: @social-pinterest;
+    }
+
+    .navbar-link-stumbleupon:focus,
+    .navbar-link-stumbleupon:hover {
+        color: @social-stumbleupon;
+    }
+
+    .navbar-link-twitter:focus,
+    .navbar-link-twitter:hover {
+        color: @social-twitter;
+    }
+}

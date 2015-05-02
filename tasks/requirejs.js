@@ -8,15 +8,22 @@ module.exports = function requirejs(grunt) {
             options: {
                 baseUrl: 'public/js',
                 dir: '.build/js',
-                optimize: 'uglify',
                 modules: [
                     {
                         name: 'app'
                     }
                 ],
+                optimize: 'uglify2',
                 paths: {
-                    'bootstrap': '../components/bootstrap/dist/js/bootstrap',
-                    'jquery': '../components/jquery/dist/jquery'
+                    async: '../components/requirejs-plugins/src/async',
+                    bootstrap: '../components/bootstrap/dist/js/bootstrap',
+                    googlemaps: '../components/googlemaps-amd/src/googlemaps',
+                    jquery: '../components/jquery/dist/jquery',
+                },
+                shim: {
+                    bootstrap: {
+                        deps: ['jquery']
+                    }
                 }
             }
         }

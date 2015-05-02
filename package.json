@@ -39,6 +39,7 @@
         "kraken-js": "1.0.5",
         "less": "1.7.5",
         "localizr": "0.1.6",
+        "mongoose": "4.0.2",
         "newrelic": "1.18.4",
         "requirejs": "2.1.17"
     },

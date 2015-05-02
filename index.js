@@ -1,6 +1,7 @@
 'use strict';
 
 require('newrelic');
+require('./lib/database');
 
 var express = require('express');
 var kraken = require('kraken-js');

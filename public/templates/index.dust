@@ -1,9 +1,6 @@
-{>"layouts/cover"/}
+{>"layouts/master"/}
 
-{<content}
-    <img class="broon-line-logo" src="/img/logo.png" alt="{@pre type="content" key="logo.alt"/}">
-
-    <h1 class="cover-heading">{@pre type="content" key="heading"/}</h1>
-
-    <p class="lead">{@pre type="content" key="description"/}</p>
-{/content}
+{<body}
+    <input id="pac-input" class="pac-controls" type="text" placeholder="{@pre type="content" key="pac.placeholder"/}">
+    <div id="map-canvas"></div>
+{/body}

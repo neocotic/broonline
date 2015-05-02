@@ -50,6 +50,13 @@
                 "name": "path:./lib/middleware/config"
             }
         },
+        "context": {
+            "priority": 96,
+            "enabled": true,
+            "module": {
+                "name": "path:./lib/middleware/context"
+            }
+        },
         "expressView": {
             "priority": 100,
             "enabled": true,

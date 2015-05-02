@@ -1,10 +1,26 @@
 'use strict';
 
 requirejs.config({
-    paths: {}
+    googlemaps: {
+        params: {
+            key: 'AIzaSyArjTEWMV6lyyzgXjA1Pw6WipsEcElPnj8',
+            libraries: 'places',
+            signed_in: true
+        }
+    },
+    paths: {},
+    shim: {
+        bootstrap: {
+            deps: ['jquery']
+        }
+    }
 });
 
-require(['jquery', 'bootstrap'], function() {
+define([
+    'jquery',
+    'bootstrap',
+    './lib/map'
+], function() {
 
     var app = {
         initialize: function() {
@@ -13,5 +29,7 @@ require(['jquery', 'bootstrap'], function() {
     };
 
     app.initialize();
+
+    return app;
 
 });
