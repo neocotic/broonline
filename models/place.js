@@ -9,6 +9,7 @@ function PlaceModel() {
             no: { type: Number, min: 0, default: 0 },
             yes: { type: Number, min: 0, default: 0 }
         },
+        dominant: { type: String, enum: [null, 'no', 'yes'] },
         position: {
             latitude: { type: Number },
             longitude: { type: Number }
@@ -25,8 +26,24 @@ function PlaceModel() {
         this.save(callback);
     };
 
+    schema.statics.findAllDominantYes = function(name, cb) {
+        return this.find({ name: new RegExp(name, 'i') }, cb);
+    };
+
     schema.virtual('answers.total').get(function() {
         return this.answers.no + this.answers.yes;
+    });
+
+    schema.pre('save', function(next) {
+        if (this.answers.no === this.answers.yes) {
+            this.dominant = null;
+        } else if (this.answers.no > this.answers.yes) {
+            this.dominant = 'no';
+        } else {
+            this.dominant = 'yes';
+        }
+
+        next();
     });
 
     return mongoose.model('Place', schema);
