@@ -23,11 +23,7 @@
     <p class="map-info-window-results-empty">{@pre type="content" key="results.empty"/}</p>
 
     <div class="progress hide">
-        <div class="progress-bar progress-bar-success" data-result="yes" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-            <span class="sr-only"></span>
-        </div>
-        <div class="progress-bar progress-bar-danger" data-result="no" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-            <span class="sr-only"></span>
-        </div>
+        <div class="progress-bar progress-bar-success" data-result="yes" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar progress-bar-danger" data-result="no" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 </div>

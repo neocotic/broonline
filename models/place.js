@@ -8,6 +8,10 @@ function PlaceModel() {
         answers: {
             no: { type: Number, min: 0, default: 0 },
             yes: { type: Number, min: 0, default: 0 }
+        },
+        position: {
+            latitude: { type: Number },
+            longitude: { type: Number }
         }
     });
 
@@ -21,7 +25,7 @@ function PlaceModel() {
         this.save(callback);
     };
 
-    schema.virtual('answers.total').get(function () {
+    schema.virtual('answers.total').get(function() {
         return this.answers.no + this.answers.yes;
     });
 

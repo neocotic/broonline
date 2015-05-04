@@ -61,7 +61,13 @@ define([
         return $.ajax({
             method: 'POST',
             url: '/api/places/' + encodeURIComponent(this._place.place_id) + '/answer',
-            data: { answer: answer },
+            data: {
+                answer: answer,
+                position: {
+                    lat: this._place.geometry.location.lat(),
+                    lng: this._place.geometry.location.lng()
+                }
+            },
             dataType: 'json',
             success: this._update(),
             error: this._update({ error: true })
@@ -104,6 +110,14 @@ define([
         }, this);
     };
 
+    Marker.prototype._updateResult = function($el, count, percentage) {
+        $el.attr('aria-valuenow', percentage)
+            .css('width', percentage + '%')
+            .text(count);
+
+        return this;
+    };
+
     Marker.prototype._updateResults = function($el, data) {
         var total = data.answers.no + data.answers.yes;
         var percentages = {
@@ -117,15 +131,12 @@ define([
                 .end()
             .find('.progress')
                 .toggleClass('hide', (total === 0))
-                .find('[data-result="no"]')
-                    .attr('aria-valuenow', percentages.no)
-                    .css('width', percentages.no + '%')
-                    .end()
-                .find('[data-result="yes"]')
-                    .attr('aria-valuenow', percentages.yes)
-                    .css('width', percentages.yes + '%')
-                    .end()
-                .end()
+                .end();
+
+        this._updateResult($el.find('[data-result="no"]'), data.answers.no, percentages.no);
+        this._updateResult($el.find('[data-result="yes"]'), data.answers.yes, percentages.yes);
+
+        return this;
     };
 
     Marker.prototype.getPlace = function() {

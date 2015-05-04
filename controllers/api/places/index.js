@@ -22,6 +22,7 @@ module.exports = function(router) {
 
     router.post('/:place/answer', function(req, res) {
         var answer = (req.body.answer === 'true');
+        var position = (req.body.position || {});
         var id = req.params.place;
 
         PlaceModel.findById(id, function(error, place) {
@@ -30,7 +31,13 @@ module.exports = function(router) {
             }
 
             if (!place) {
-                place = new PlaceModel({ _id: id });
+                place = new PlaceModel({
+                    _id: id,
+                    position: {
+                        latitude: parseFloat(position.lat),
+                        longitude: parseFloat(position.lng)
+                    }
+                });
             }
 
             place.saveAnswer(answer, function(error) {
