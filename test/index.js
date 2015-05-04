@@ -24,7 +24,7 @@ describe('/', function() {
         mock.close(done);
     });
 
-    it('should say "Coming very soon"', function (done) {
+    it('should say "the broon line"', function (done) {
         request(mock)
             .get('/')
             .expect(200)

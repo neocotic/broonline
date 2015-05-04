@@ -1,0 +1,33 @@
+<h4 class="map-info-window-name"></h4>
+
+<p class="map-info-window-address text-muted"></p>
+
+<p class="map-info-window-question">{@pre type="content" key="question"/}</p>
+
+<div class="map-info-window-choices btn-group" role="group">
+    <button type="button" class="btn btn-default" data-value="true" disabled>
+        <i class="fa fa-check text-success"></i> {@pre type="content" key="answer.yes"/}
+    </button>
+    <button type="button" class="btn btn-default" data-value="false" disabled>
+        <i class="fa fa-times text-danger"></i> {@pre type="content" key="answer.no"/}
+    </button>
+</div>
+
+<div class="map-info-window-loading">
+    <i class="fa fa-circle-o-notch fa-spin"></i> {@pre type="content" key="loading"/}
+</div>
+
+<p class="map-info-window-error text-danger hide">{@pre type="content" key="error"/}</p>
+
+<div class="map-info-window-results hide">
+    <p class="map-info-window-results-empty">{@pre type="content" key="results.empty"/}</p>
+
+    <div class="progress hide">
+        <div class="progress-bar progress-bar-success" data-result="yes" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <span class="sr-only"></span>
+        </div>
+        <div class="progress-bar progress-bar-danger" data-result="no" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <span class="sr-only"></span>
+        </div>
+    </div>
+</div>

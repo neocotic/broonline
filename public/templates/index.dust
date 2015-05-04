@@ -3,4 +3,8 @@
 {<body}
     <input id="pac-input" class="pac-controls" type="text" placeholder="{@pre type="content" key="pac.placeholder"/}">
     <div id="map-canvas"></div>
+
+    <script id="marker-template" type="text/template">
+        {>"fragments/info-window"/}
+    </script>
 {/body}

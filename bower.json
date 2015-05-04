@@ -28,8 +28,6 @@
     },
     "dependencies": {
         "bootstrap": "3.3.4",
-        "dustjs-linkedin": "2.6.2",
-        "dustjs-linkedin-helpers": "1.6.3",
         "fontawesome": "4.3.0",
         "googlemaps-amd": "1.0.1",
         "html5shiv": "3.7.2",

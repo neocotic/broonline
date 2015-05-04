@@ -1,51 +1,39 @@
 'use strict';
 
-define(['jquery', 'googlemaps!'], function($, gmaps) {
-    var $canvas = $('#map-canvas');
-    var $input = $('#pac-input');
+define([
+    'jquery',
+    './google-maps'
+], function($, gmaps) {
 
-    if (!$canvas.length) {
-        return;
+    var DEFAULT_POSITION = new gmaps.LatLng(55.9410656, -3.2053836);
+
+    function Map(options) {
+        this.$el = options.$el;
+        this.el = this.$el[0];
+
+        this.map = new gmaps.Map(this.el, {
+            zoom: 8
+        });
+
+        this.getInitialPosition = this.getInitialPosition($.proxy(function(position) {
+            this.map.setCenter(position);
+        }, this));
     }
 
-    var defaultPosition = new gmaps.LatLng(55.9410656, -3.2053836);
-    var options = {
-        zoom: 8
-    };
-    var map = new gmaps.Map($canvas[0], options);
-
-    map.controls[gmaps.ControlPosition.TOP_LEFT].push($input[0]);
-
-    var autocomplete = new gmaps.places.Autocomplete($input[0]);
-    autocomplete.bindTo('bounds', map);
-    autocomplete.setTypes(['establishment']);
-
-    gmaps.event.addListener(autocomplete, 'place_changed', function() {
-        var place = autocomplete.getPlace();
-
-        if (!place.geometry) {
-            return;
-        }
-
-        if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
+    Map.prototype.getInitialPosition = function(callback) {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    callback(new gmaps.LatLng(position.coords.latitude,  position.coords.longitude));
+                },
+                function() {
+                    callback(DEFAULT_POSITION);
+                });
         } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(17);
+            callback(DEFAULT_POSITION);
         }
-    });
+    };
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            function(position) {
-                map.setCenter(new gmaps.LatLng(position.coords.latitude,  position.coords.longitude));
-            },
-            function() {
-                map.setCenter(defaultPosition);
-            });
-    } else {
-        map.setCenter(defaultPosition);
-    }
+    return Map;
 
-    return map;
 });

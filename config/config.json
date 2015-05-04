@@ -34,6 +34,29 @@
                 "arguments": ["path:./.build"]
             }
         },
+        "session": {
+            "module": {
+                "arguments": [
+                    {
+                        "key": "SESSIONID",
+                        "secret": "env:SESSION_SECRET",
+                        "resave": true,
+                        "saveUninitialized": true
+                    }
+                ]
+            }
+        },
+        "appsec": {
+            "module": {
+                "arguments": [
+                    {
+                        "xframe": "SAMEORIGIN",
+                        "p3p": false,
+                        "csp": false
+                    }
+                ]
+            }
+        },
         "router": {
             "module": {
                 "arguments": [
@@ -51,10 +74,17 @@
             }
         },
         "context": {
-            "priority": 96,
+            "priority": 95,
             "enabled": true,
             "module": {
                 "name": "path:./lib/middleware/context"
+            }
+        },
+        "locale": {
+            "priority": 95,
+            "enabled": true,
+            "module": {
+                "name": "path:./lib/middleware/locale"
             }
         },
         "expressView": {
@@ -62,6 +92,16 @@
             "enabled": true,
             "module": {
                 "name": "engine-munger/lib/expressView"
+            }
+        },
+        "csrf": {
+            "priority": 111,
+            "enabled": true,
+            "route": "/((?!api))*",
+            "module": {
+                "name": "lusca",
+                "method": "csrf",
+                "arguments": [{}]
             }
         },
         "fileNotFound": {

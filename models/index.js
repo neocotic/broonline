@@ -1,5 +1,8 @@
 'use strict';
 
-module.exports = function IndexModel() {
-    return {};
-};
+function IndexModel() {
+    // TODO
+    return function() {};
+}
+
+module.exports = new IndexModel();

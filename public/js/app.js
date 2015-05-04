@@ -18,18 +18,30 @@ requirejs.config({
 
 define([
     'jquery',
-    'bootstrap',
-    './lib/map'
-], function() {
+    './lib/map',
+    './lib/auto-complete',
+    './lib/marker'
+], function($, Map, AutoComplete, Marker) {
 
-    var app = {
-        initialize: function() {
-            // TODO: Something
+    function App() {
+        var $autoCompleteElement = $('#pac-input');
+        var $mapElement = $('#map-canvas');
+
+        if ($autoCompleteElement.length && $mapElement.length) {
+            this.map = new Map({
+                $el: $mapElement
+            });
+            this.marker = new Marker({
+                map: this.map
+            });
+            this.autoComplete = new AutoComplete({
+                $el: $autoCompleteElement,
+                map: this.map,
+                marker: this.marker
+            });
         }
-    };
+    }
 
-    app.initialize();
-
-    return app;
+    return new App();
 
 });
