@@ -6,6 +6,7 @@ define([
 ], function($, gmaps) {
 
     function Marker(options) {
+        this.heatmap = options.heatmap;
         this.map = options.map;
 
         this.$el = $('<div class="map-info-window">').html($('#marker-template').html());
@@ -69,7 +70,7 @@ define([
                 }
             },
             dataType: 'json',
-            success: this._update(),
+            success: this._update({ reloadHeatmap: true }),
             error: this._update({ error: true })
         });
     };
@@ -82,6 +83,10 @@ define([
         return $.proxy(function(data) {
             if (this._place.place_id !== this.$el.data('place')) {
                 return;
+            }
+
+            if (options.reloadHeatmap) {
+                this.heatmap.load();
             }
 
             this.$el

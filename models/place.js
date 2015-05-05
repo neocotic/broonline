@@ -26,8 +26,8 @@ function PlaceModel() {
         this.save(callback);
     };
 
-    schema.statics.findAllDominantYes = function(name, cb) {
-        return this.find({ name: new RegExp(name, 'i') }, cb);
+    schema.statics.findAllDominantYes = function(callback) {
+        return this.find({ dominant: 'yes' }, callback);
     };
 
     schema.virtual('answers.total').get(function() {

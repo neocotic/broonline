@@ -4,24 +4,20 @@ requirejs.config({
     googlemaps: {
         params: {
             key: 'AIzaSyArjTEWMV6lyyzgXjA1Pw6WipsEcElPnj8',
-            libraries: 'places',
+            libraries: 'places,visualization',
             signed_in: true
         }
     },
-    paths: {},
-    shim: {
-        bootstrap: {
-            deps: ['jquery']
-        }
-    }
+    paths: {}
 });
 
 define([
     'jquery',
     './lib/map',
     './lib/auto-complete',
+    './lib/heatmap',
     './lib/marker'
-], function($, Map, AutoComplete, Marker) {
+], function($, Map, AutoComplete, Heatmap, Marker) {
 
     function App() {
         var $autoCompleteElement = $('#pac-input');
@@ -31,7 +27,11 @@ define([
             this.map = new Map({
                 $el: $mapElement
             });
+            this.heatmap = new Heatmap({
+                map: this.map
+            });
             this.marker = new Marker({
+                heatmap: this.heatmap,
                 map: this.map
             });
             this.autoComplete = new AutoComplete({

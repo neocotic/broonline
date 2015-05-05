@@ -4,6 +4,16 @@ var PlaceModel = require('../../../models/place');
 
 module.exports = function(router) {
 
+    router.get('/heatmap', function(req, res) {
+        PlaceModel.findAllDominantYes(function(error, places) {
+            if (error) {
+                throw error;
+            }
+
+            res.send(places);
+        });
+    });
+
     router.get('/:place', function(req, res) {
         var id = req.params.place;
 
