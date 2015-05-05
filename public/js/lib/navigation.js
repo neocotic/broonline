@@ -2,10 +2,11 @@
 
 define([
     'jquery',
+    'bootstrap',
     'https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js'
 ], function($) {
 
-    function Feedback(options) {
+    function Navigation(options) {
         this.$el = options.$el;
         this.el = this.$el[0];
 
@@ -18,25 +19,30 @@ define([
             url: 'https://thebroonline.freshdesk.com'
         });
 
-        this.$el.on('click', $.proxy(function(event) {
+        this.$el.find('.navbar-link[title]').tooltip({
+            container: 'body',
+            placement: 'bottom'
+        });
+
+        this.$el.on('click', '.navbar-link-support', $.proxy(function(event) {
             event.preventDefault();
 
-            this.show();
+            this.showFeedback();
         }, this));
     }
 
-    Feedback.prototype.hide = function() {
+    Navigation.prototype.hideFeedback = function() {
         FreshWidget.close();
 
         return this;
     };
 
-    Feedback.prototype.show = function() {
+    Navigation.prototype.showFeedback = function() {
         FreshWidget.show();
 
         return this;
     };
 
-    return Feedback;
+    return Navigation;
 
 });

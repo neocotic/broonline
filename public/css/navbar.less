@@ -8,6 +8,7 @@
     position: relative;
     background-color: @navbar-default-brand-bg;
     font-size: @navbar-default-brand-size;
+    outline: none;
     .transition(padding-left .6s ease);
 
     .arrow-right {
@@ -42,7 +43,16 @@
     }
 
     .navbar-link {
-        padding-left: 10px;
+        margin-left: 10px;
+
+        &:focus,
+        &:hover {
+            outline: none;
+
+            > * {
+                .animation(pulse 2s linear infinite);
+            }
+        }
     }
 
     .navbar-link-facebook:focus,
@@ -58,6 +68,11 @@
     .navbar-link-google-plus:focus,
     .navbar-link-google-plus:hover {
         color: @social-google-plus;
+    }
+
+    .navbar-link-info:focus,
+    .navbar-link-info:hover {
+        color: @brand-info;
     }
 
     .navbar-link-support:focus,

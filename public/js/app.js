@@ -8,7 +8,12 @@ requirejs.config({
             signed_in: true
         }
     },
-    paths: {}
+    paths: {},
+    shim: {
+        bootstrap: {
+            deps: ['jquery']
+        }
+    }
 });
 
 define([
@@ -17,13 +22,17 @@ define([
     './lib/auto-complete',
     './lib/heatmap',
     './lib/marker',
-    './lib/feedback'
-], function($, Map, AutoComplete, Heatmap, Marker, Feedback) {
+    './lib/navigation'
+], function($, Map, AutoComplete, Heatmap, Marker, Navigation) {
 
     function App() {
         var $autoComplete = $('#pac-input');
         var $map = $('#map-canvas');
-        var $support = $('.navbar-link-support');
+        var $navigation = $('.navbar-social-links');
+
+        this.navigation = new Navigation({
+            $el: $navigation
+        });
 
         if ($autoComplete.length && $map.length) {
             this.map = new Map({
@@ -42,10 +51,6 @@ define([
                 marker: this.marker
             });
         }
-
-        this.feedback = new Feedback({
-            $el: $support
-        });
     }
 
     return new App();

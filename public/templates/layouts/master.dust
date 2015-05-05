@@ -32,12 +32,13 @@
             </div>
 
             <p class="navbar-text navbar-right navbar-social-links">
-                <a href="https://twitter.com/intent/tweet?status={host|uc}" class="navbar-link navbar-link-twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={host|uc}" class="navbar-link navbar-link-facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
-                <a href="https://plus.google.com/share?url={host|uc}" class="navbar-link navbar-link-google-plus"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                <a href="https://www.stumbleupon.com/submit?url={host|uc}" class="navbar-link navbar-link-stumbleupon"><i class="fa fa-stumbleupon-circle fa-2x"></i></a>
-                <a href="https://github.com/neocotic/thebroonline.com" class="navbar-link navbar-link-github"><i class="fa fa-github fa-2x"></i></a>
-                <a href="https://thebroonline.freshdesk.com" class="navbar-link navbar-link-support" data-uv-lightbox="classic_widget" data-uv-mode="full" data-uv-primary-color="#a0522d" data-uv-link-color="#337ab7" data-uv-default-mode="support" data-uv-forum-id="295575"><i class="fa fa-life-ring fa-2x"></i></a>
+                <a href="https://twitter.com/intent/tweet?status={host|uc}" class="navbar-link navbar-link-twitter" title="{@pre type="content" key="navbar.twitter"/}"><i class="fa fa-twitter-square fa-2x"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={host|uc}" class="navbar-link navbar-link-facebook" title="{@pre type="content" key="navbar.facebook"/}"><i class="fa fa-facebook-square fa-2x"></i></a>
+                <a href="https://plus.google.com/share?url={host|uc}" class="navbar-link navbar-link-google-plus" title="{@pre type="content" key="navbar.googleplus"/}"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                <a href="https://www.stumbleupon.com/submit?url={host|uc}" class="navbar-link navbar-link-stumbleupon" title="{@pre type="content" key="navbar.stumbleupon"/}"><i class="fa fa-stumbleupon-circle fa-2x"></i></a>
+                <a href="https://github.com/neocotic/thebroonline.com" class="navbar-link navbar-link-github" title="{@pre type="content" key="navbar.github"/}"><i class="fa fa-github fa-2x"></i></a>
+                <a href="#" data-toggle="modal" data-target="#info-dialog" class="navbar-link navbar-link-info" title="{@pre type="content" key="navbar.info"/}"><i class="fa fa-info-circle fa-2x"></i></a>
+                <a href="https://thebroonline.freshdesk.com" class="navbar-link navbar-link-support" title="{@pre type="content" key="navbar.support"/}"><i class="fa fa-life-ring fa-2x"></i></a>
             </p>
         </div>
     </nav>
@@ -45,6 +46,8 @@
     <main role="main">
         {+body/}
     </main>
+
+    {>"fragments/info-dialog"/}
 
     <script data-main="/js/app" src="/components/requirejs/require.js"></script>
     <script>
