@@ -5,7 +5,8 @@
 
 #pac-input {
     padding-top: 16px;
-    width: 400px;
+    padding-right: 68px;
+    width: 100%;
 
     > input {
         background-color: @white;
@@ -15,7 +16,7 @@
         margin-left: 12px;
         padding: 0 32px 0 13px;
         text-overflow: ellipsis;
-        width: 400px;
+        width: 100%;
 
         &:focus {
             border-color: @brand-info;
@@ -39,7 +40,7 @@
 
     .btn-clear {
         position: absolute;
-        right: -12px;
+        right: 56px;
         bottom: 0;
         margin: 0;
         height: 32px;
@@ -65,5 +66,20 @@
     }
     .map-info-window-results > * {
         margin-bottom: 0;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    #pac-input {
+        padding-right: 0;
+        width: 400px;
+
+        > input {
+            width: 400px;
+        }
+    }
+
+    .pac-controls .btn-clear {
+        right: -12px;
     }
 }
