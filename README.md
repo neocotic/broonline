@@ -9,6 +9,7 @@ Fun project for tracking the use of broon sauce at chippies.
 
 Before you can install the website locally you'll need to install the following prerequisites first:
 
+- [git](http://git-scm.com)
 - [Node.js](https://nodejs.org) (at least v0.12)
 - [Bower](http://bower.io)
 - [Grunt](http://gruntjs.com)
@@ -45,6 +46,14 @@ You'll need to have the following environment variables set;
     <td>secret</td>
   </tr>
 </table>
+
+Once you've done all of that, you can just checkout the code and then install it with the following commands;
+
+``` bash
+$ git clone https://github.com/neocotic/thebroonline.com.git thebroonline.com
+$ cd thebroonline.com
+$ npm install
+```
 
 ## Running
 
