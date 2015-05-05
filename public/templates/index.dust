@@ -1,7 +1,13 @@
 {>"layouts/master"/}
 
 {<body}
-    <input id="pac-input" class="pac-controls" type="text" placeholder="{@pre type="content" key="pac.placeholder"/}">
+    <div id="pac-input" class="pac-controls">
+        <button type="button" class="btn-clear" role="button">
+            <i class="fa fa-times"></i>
+        </button>
+        <input type="text" placeholder="{@pre type="content" key="pac.placeholder"/}" autofocus="autofocus" autocomplete="off" role="search">
+    </div>
+
     <div id="map-canvas"></div>
 
     <script id="marker-template" type="text/template">

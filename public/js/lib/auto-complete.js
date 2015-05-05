@@ -8,14 +8,21 @@ define([
     function AutoComplete(options) {
         this.$el = options.$el;
         this.el = this.$el[0];
+        this.$input = this.$el.find('input');
+        this.input = this.$input[0];
         this.map = options.map;
         this.marker = options.marker;
 
-        this._control = new gmaps.places.Autocomplete(this.el);
+        this._control = new gmaps.places.Autocomplete(this.input);
         this._control.bindTo('bounds', this.map.map);
         this._control.setTypes(['establishment']);
 
         this.map.map.controls[gmaps.ControlPosition.TOP_LEFT].push(this.el);
+
+        this.$el.on('click', '.btn-clear', $.proxy(function() {
+            this.$input.val('');
+            this.marker.hide();
+        }, this));
 
         gmaps.event.addListener(this._control, 'place_changed', $.proxy(function() {
             this.marker.hide();
