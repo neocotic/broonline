@@ -16,16 +16,18 @@ define([
     './lib/map',
     './lib/auto-complete',
     './lib/heatmap',
-    './lib/marker'
-], function($, Map, AutoComplete, Heatmap, Marker) {
+    './lib/marker',
+    './lib/feedback'
+], function($, Map, AutoComplete, Heatmap, Marker, Feedback) {
 
     function App() {
-        var $autoCompleteElement = $('#pac-input');
-        var $mapElement = $('#map-canvas');
+        var $autoComplete = $('#pac-input');
+        var $map = $('#map-canvas');
+        var $support = $('.navbar-link-support');
 
-        if ($autoCompleteElement.length && $mapElement.length) {
+        if ($autoComplete.length && $map.length) {
             this.map = new Map({
-                $el: $mapElement
+                $el: $map
             });
             this.heatmap = new Heatmap({
                 map: this.map
@@ -35,11 +37,15 @@ define([
                 map: this.map
             });
             this.autoComplete = new AutoComplete({
-                $el: $autoCompleteElement,
+                $el: $autoComplete,
                 map: this.map,
                 marker: this.marker
             });
         }
+
+        this.feedback = new Feedback({
+            $el: $support
+        });
     }
 
     return new App();

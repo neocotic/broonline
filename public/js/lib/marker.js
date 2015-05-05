@@ -25,9 +25,7 @@ define([
             this.submit(answer);
         }, this));
 
-        gmaps.event.addListener(this._marker, 'click', $.proxy(function() {
-            this.show();
-        }, this));
+        gmaps.event.addListener(this._marker, 'click', $.proxy(this.show, this));
     }
 
     Marker.prototype.hide = function() {

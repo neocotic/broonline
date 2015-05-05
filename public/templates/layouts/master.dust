@@ -37,6 +37,7 @@
                 <a href="https://plus.google.com/share?url={host|uc}" class="navbar-link navbar-link-google-plus"><i class="fa fa-google-plus-square fa-2x"></i></a>
                 <a href="https://www.stumbleupon.com/submit?url={host|uc}" class="navbar-link navbar-link-stumbleupon"><i class="fa fa-stumbleupon-circle fa-2x"></i></a>
                 <a href="https://github.com/neocotic/thebroonline.com" class="navbar-link navbar-link-github"><i class="fa fa-github fa-2x"></i></a>
+                <a href="https://thebroonline.freshdesk.com" class="navbar-link navbar-link-support" data-uv-lightbox="classic_widget" data-uv-mode="full" data-uv-primary-color="#a0522d" data-uv-link-color="#337ab7" data-uv-default-mode="support" data-uv-forum-id="295575"><i class="fa fa-life-ring fa-2x"></i></a>
             </p>
         </div>
     </nav>
