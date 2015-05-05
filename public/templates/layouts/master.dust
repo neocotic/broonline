@@ -36,7 +36,6 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u={host|uc}" class="navbar-link navbar-link-facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
                 <a href="https://plus.google.com/share?url={host|uc}" class="navbar-link navbar-link-google-plus"><i class="fa fa-google-plus-square fa-2x"></i></a>
                 <a href="https://www.stumbleupon.com/submit?url={host|uc}" class="navbar-link navbar-link-stumbleupon"><i class="fa fa-stumbleupon-circle fa-2x"></i></a>
-                <a href="https://pinterest.com/pin/create/bookmarklet/?is_video=false&url={host|uc}" class="navbar-link navbar-link-pinterest"><i class="fa fa-pinterest fa-2x"></i></a>
                 <a href="https://github.com/neocotic/thebroonline.com" class="navbar-link navbar-link-github"><i class="fa fa-github fa-2x"></i></a>
             </p>
         </div>
