@@ -5,7 +5,7 @@ var PlaceModel = require('../../../models/place');
 module.exports = function(router) {
 
     router.get('/heatmap', function(req, res) {
-        PlaceModel.findAllDominantYes(function(error, places) {
+        PlaceModel.find({ dominant: 'yes' }, function(error, places) {
             if (error) {
                 throw error;
             }

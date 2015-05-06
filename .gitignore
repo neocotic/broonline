@@ -1,6 +1,7 @@
 .build/
 public/components/
 
+dump/
 node_modules/
 .env
 *.log

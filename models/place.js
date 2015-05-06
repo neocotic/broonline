@@ -9,6 +9,10 @@ function PlaceModel() {
             no: { type: Number, min: 0, default: 0 },
             yes: { type: Number, min: 0, default: 0 }
         },
+        dates: {
+            created: { type: Date, default: Date.now },
+            modified: { type: Date, default: Date.now }
+        },
         dominant: { type: String, enum: [null, 'no', 'yes'] },
         position: {
             latitude: { type: Number },
@@ -26,15 +30,13 @@ function PlaceModel() {
         this.save(callback);
     };
 
-    schema.statics.findAllDominantYes = function(callback) {
-        return this.find({ dominant: 'yes' }, callback);
-    };
-
     schema.virtual('answers.total').get(function() {
         return this.answers.no + this.answers.yes;
     });
 
     schema.pre('save', function(next) {
+        this.dates.modified = Date.now();
+
         if (this.answers.no === this.answers.yes) {
             this.dominant = null;
         } else if (this.answers.no > this.answers.yes) {
