@@ -35,10 +35,12 @@
         "dustjs-linkedin": "2.6.2",
         "engine-munger": "0.2.6",
         "express": "4.12.3",
+        "express-sitemap": "1.5.5",
         "kraken-devtools": "1.2.2",
         "kraken-js": "1.0.5",
         "less": "1.7.5",
         "localizr": "0.1.6",
+        "moment": "2.10.2",
         "mongoose": "4.0.2",
         "newrelic": "1.18.4",
         "requirejs": "2.1.17"

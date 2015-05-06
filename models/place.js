@@ -27,7 +27,19 @@ function PlaceModel() {
             this.answers.no = this.answers.no + 1;
         }
 
-        this.save(callback);
+        return this.save(callback);
+    };
+
+    schema.statics.findLastCreated = function(callback) {
+        return this.findOne()
+            .sort('-dates.created')
+            .exec(callback);
+    };
+
+    schema.statics.findLastModified = function(callback) {
+        return this.findOne()
+            .sort('-dates.modified')
+            .exec(callback);
     };
 
     schema.virtual('answers.total').get(function() {
