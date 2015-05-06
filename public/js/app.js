@@ -22,16 +22,16 @@ define([
     './lib/auto-complete',
     './lib/heatmap',
     './lib/marker',
-    './lib/navigation'
-], function($, Map, AutoComplete, Heatmap, Marker, Navigation) {
+    './lib/site-links'
+], function($, Map, AutoComplete, Heatmap, Marker, SiteLinks) {
 
     function App() {
         var $autoComplete = $('#pac-input');
         var $map = $('#map-canvas');
-        var $navigation = $('.navbar-social-links');
+        var $siteLinks = $('.navbar-site-links');
 
-        this.navigation = new Navigation({
-            $el: $navigation
+        this.siteLinks = new SiteLinks({
+            $el: $siteLinks
         });
 
         if ($autoComplete.length && $map.length) {

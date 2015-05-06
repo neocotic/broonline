@@ -6,7 +6,7 @@ define([
     'https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js'
 ], function($) {
 
-    function Navigation(options) {
+    function SiteLinks(options) {
         this.$el = options.$el;
         this.el = this.$el[0];
 
@@ -31,18 +31,18 @@ define([
         }, this));
     }
 
-    Navigation.prototype.hideFeedback = function() {
+    SiteLinks.prototype.hideFeedback = function() {
         FreshWidget.close();
 
         return this;
     };
 
-    Navigation.prototype.showFeedback = function() {
+    SiteLinks.prototype.showFeedback = function() {
         FreshWidget.show();
 
         return this;
     };
 
-    return Navigation;
+    return SiteLinks;
 
 });
