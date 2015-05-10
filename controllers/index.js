@@ -51,7 +51,8 @@ module.exports = function(router) {
                         lastmod: lastModified.format(),
                         priority: 1
                     }
-                }
+                },
+                sitemapSubmission: '/sitemap.xml'
             }));
         });
     }
