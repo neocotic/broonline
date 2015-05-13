@@ -1,0 +1,18 @@
+{
+    "version": "v4",
+    "repo": "neocotic/DefinitelyTyped",
+    "ref": "googlemaps",
+    "path": "public/ts/headers/components",
+    "bundle": "public/ts/headers/tsd.d.ts",
+    "installed": {
+        "bootstrap/bootstrap.d.ts": {
+            "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+        },
+        "googlemaps/google.maps.d.ts": {
+            "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+        },
+        "jquery/jquery.d.ts": {
+            "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+        }
+    }
+}
