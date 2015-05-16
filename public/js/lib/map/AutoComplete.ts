@@ -79,7 +79,7 @@ class AutoComplete {
         this.$el = $el;
         this.el = this.$el[0];
         this.$input = this.$el.find('input');
-        this.input = this.$input[0];
+        this.input = <HTMLInputElement> this.$input[0];
         this.map = map;
         this.marker = marker;
 

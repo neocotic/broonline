@@ -12,7 +12,7 @@ import Map = require('./Map');
  */
 interface HeatmapUpdaterClosure {
 
-    (places: PlaceModel[]): void;
+    (places?: PlaceModel[]): void;
 }
 
 /**

@@ -14,7 +14,7 @@ import Map = require('./Map');
  */
 interface MarkerUpdaterClosure {
 
-    (place: PlaceModel): void;
+    (place?: PlaceModel): void;
 }
 
 /**
@@ -259,7 +259,7 @@ class Marker {
                     .toggleClass('hide', (options.error || options.loading))
                     .end();
 
-            if (!options.error && !options.loading) {
+            if (!options.error && !options.loading && place) {
                 this.updateResults(this.$el.find('.map-info-window-results'), place);
             }
         };
