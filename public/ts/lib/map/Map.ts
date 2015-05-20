@@ -1,7 +1,5 @@
 /// <reference path="../../headers/tsd.d.ts" />
 
-import gmaps = require('googlemaps!');
-
 /**
  * Primary component responsible for displaying the map.
  *
@@ -42,8 +40,8 @@ class Map {
         this.$el = $el;
         this.el = this.$el[0];
 
-        this.api = new gmaps.Map(this.el, {
-            center: new gmaps.LatLng(55.9410656, -3.2053836),
+        this.api = new google.maps.Map(this.el, {
+            center: new google.maps.LatLng(55.9410656, -3.2053836),
             zoom: 8
         });
     }

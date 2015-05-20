@@ -5,8 +5,8 @@ module.exports = function ts(grunt) {
 
     return {
         build: {
-            src: ['public/js/**/*.ts'],
-            dest: '.build/js',
+            src: ['public/ts/**/*.ts'],
+            dest: '.build/ts',
             options: {
                 compiler: 'node_modules/typescript/bin/tsc',
                 module: 'amd'

@@ -2,7 +2,6 @@
 
 import Map = require('./Map');
 import Marker = require('./Marker');
-import gmaps = require('googlemaps!');
 
 /**
  * Component for displaying the auto-completion input field to find and select places.
@@ -83,17 +82,17 @@ class AutoComplete {
         this.map = map;
         this.marker = marker;
 
-        this.api = new gmaps.places.Autocomplete(this.input);
+        this.api = new google.maps.places.Autocomplete(this.input);
         this.api.bindTo('bounds', this.map.api);
         this.api.setTypes(['establishment']);
 
-        this.map.api.controls[gmaps.ControlPosition.TOP_LEFT].push(this.el);
+        this.map.api.controls[google.maps.ControlPosition.TOP_LEFT].push(this.el);
 
         this.$el.on('click', '.btn-clear', () => {
             this.clear();
         });
 
-        gmaps.event.addListener(this.api, 'place_changed', () => {
+        google.maps.event.addListener(this.api, 'place_changed', () => {
             this.place = this.api.getPlace();
         });
     }

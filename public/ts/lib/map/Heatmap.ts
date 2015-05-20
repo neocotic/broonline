@@ -1,7 +1,6 @@
 /// <reference path="../../headers/tsd.d.ts" />
 
 import $ = require('jquery');
-import gmaps = require('googlemaps!');
 import Map = require('./Map');
 
 /**
@@ -78,8 +77,8 @@ class Heatmap {
      */
     constructor(map: Map) {
         this.map = map;
-        this.array = new gmaps.MVCArray([]);
-        this.api = new gmaps.visualization.HeatmapLayer({
+        this.array = new google.maps.MVCArray([]);
+        this.api = new google.maps.visualization.HeatmapLayer({
             data: this.array
         });
         this.api.setMap(this.map.api);
@@ -120,7 +119,7 @@ class Heatmap {
             this.array.clear();
 
             $.each(places, (index, place) => {
-                this.array.push(new gmaps.LatLng(place.position.latitude, place.position.longitude));
+                this.array.push(new google.maps.LatLng(place.position.latitude, place.position.longitude));
             });
         };
     }

@@ -26,6 +26,14 @@ You'll need to have the following environment variables set;
     <th>Value</th>
   </tr>
   <tr>
+    <td>GOOGLE_ANALYTICS_ID</td>
+    <td><em>Optional</em></td>
+  </tr>
+  <tr>
+    <td>GOOGLE_MAPS_API_KEY</td>
+    <td><em>Optional</em></td>
+  </tr>
+  <tr>
     <td>MONGOLAB_URI</td>
     <td>mongodb://username:password@localhost:27017/database</td>
   </tr>

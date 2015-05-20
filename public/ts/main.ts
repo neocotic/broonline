@@ -1,18 +1,8 @@
 /// <reference path="headers/tsd.d.ts" />
 
-declare let require: any;
-
 require.config({
-    googlemaps: {
-        params: {
-            key: 'AIzaSyArjTEWMV6lyyzgXjA1Pw6WipsEcElPnj8',
-            libraries: 'places,visualization',
-            signed_in: true
-        }
-    },
-    paths: {},
     shim: {
-        bootstrap: {
+        'bootstrap': {
             deps: ['jquery']
         }
     }

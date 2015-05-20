@@ -1,7 +1,6 @@
 /// <reference path="../headers/tsd.d.ts" />
 
 declare let FreshWidget: any;
-declare let require: any;
 
 import $ = require('jquery');
 require('bootstrap');

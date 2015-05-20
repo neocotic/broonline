@@ -2,7 +2,6 @@
 /// <reference path="../../headers/lib/map/Place.d.ts" />
 
 import $ = require('jquery');
-import gmaps = require('googlemaps!');
 import Heatmap = require('./Heatmap');
 import Map = require('./Map');
 
@@ -132,11 +131,11 @@ class Marker {
         this.$el = $('<div class="map-info-window">').html(Marker.html);
         this.el = this.$el[0];
 
-        this.api = new gmaps.Marker({
-            anchorPoint: new gmaps.Point(0, -29),
+        this.api = new google.maps.Marker({
+            anchorPoint: new google.maps.Point(0, -29),
             map: this.map.api
         });
-        this.infoWindow = new gmaps.InfoWindow({
+        this.infoWindow = new google.maps.InfoWindow({
             content: this.el
         });
         this._place = null;
@@ -154,7 +153,7 @@ class Marker {
             });
         });
 
-        gmaps.event.addListener(this.api, 'click', () => {
+        google.maps.event.addListener(this.api, 'click', () => {
             this.show();
         });
     }
@@ -331,10 +330,10 @@ class Marker {
         if (this._place) {
             this.api.setIcon({
                 url: this._place.icon,
-                size: new gmaps.Size(71, 71),
-                origin: new gmaps.Point(0, 0),
-                anchor: new gmaps.Point(17, 34),
-                scaledSize: new gmaps.Size(35, 35)
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(35, 35)
             });
             this.api.setPosition(this._place.geometry.location);
             this.api.setTitle(this._place.name);
