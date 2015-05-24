@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['build', 'mochacli']);
-    grunt.registerTask('build', ['jshint', 'less', 'requirejs', 'i18n', 'copyto']);
+    grunt.registerTask('build', ['jshint', 'ts', 'less', 'requirejs', 'i18n', 'copyto']);
     grunt.registerTask('test', ['jshint', 'mochacli']);
 
 };

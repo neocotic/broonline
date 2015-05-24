@@ -43,7 +43,8 @@
         "moment": "2.10.2",
         "mongoose": "4.0.2",
         "newrelic": "1.18.4",
-        "requirejs": "2.1.17"
+        "requirejs": "2.1.17",
+        "typescript": "1.5.0-beta"
     },
     "devDependencies": {
         "bower": "^1.4.1",
@@ -58,6 +59,7 @@
         "grunt-dustjs": "^1.2.1",
         "grunt-localizr": "^0.1.4",
         "grunt-mocha-cli": "^1.13.0",
+        "grunt-ts": "^4.1.0",
         "mocha": "^2.2.4",
         "supertest": "^0.15.0"
     },

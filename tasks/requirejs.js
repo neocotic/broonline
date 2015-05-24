@@ -6,18 +6,19 @@ module.exports = function requirejs(grunt) {
     return {
         build: {
             options: {
-                baseUrl: 'public/js',
+                baseUrl: '.build/ts',
                 dir: '.build/js',
                 modules: [
                     {
-                        name: 'app'
+                        name: 'main'
                     }
                 ],
+                preserveLicenseComments: false,
+                generateSourceMaps: true,
                 optimize: 'uglify2',
                 paths: {
                     async: '../components/requirejs-plugins/src/async',
                     bootstrap: '../components/bootstrap/dist/js/bootstrap',
-                    googlemaps: '../components/googlemaps-amd/src/googlemaps',
                     jquery: '../components/jquery/dist/jquery'
                 },
                 shim: {

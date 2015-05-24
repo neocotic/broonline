@@ -1,4 +1,5 @@
 .build/
+.tscache/
 public/components/
 
 dump/

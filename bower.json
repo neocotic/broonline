@@ -29,7 +29,6 @@
     "dependencies": {
         "bootstrap": "3.3.4",
         "fontawesome": "4.3.0",
-        "googlemaps-amd": "1.0.1",
         "html5shiv": "3.7.2",
         "jquery": "1.11.2",
         "requirejs": "2.1.17"

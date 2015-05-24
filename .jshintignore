@@ -1,4 +1,4 @@
 .build/
-public/js/
+public/ts/
 
 node_modules/
