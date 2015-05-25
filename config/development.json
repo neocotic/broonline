@@ -43,14 +43,14 @@
                             "module": "kraken-devtools/plugins/less",
                             "files": "/css/**/*.css"
                         },
-                        "copier": {
-                            "module": "kraken-devtools/plugins/copier",
-                            "files": "**/*"
-                        },
                         "browserify": {
                             "module": "kraken-devtools-browserify",
                             "files": "/js/**/*.js",
-                            "transform": ["babelify"]
+                            "transform": ["browserify-shim", "babelify"]
+                        },
+                        "copier": {
+                            "module": "kraken-devtools/plugins/copier",
+                            "files": "**/*"
                         }
                     }
                 ]

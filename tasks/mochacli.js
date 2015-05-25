@@ -7,7 +7,8 @@ module.exports = function mochacli(grunt) {
             timeout: 6000,
             'check-leaks': true,
             ui: 'bdd',
-            reporter: 'spec'
+            reporter: 'spec',
+            compilers: ['js:babel/register']
         }
     };
 };

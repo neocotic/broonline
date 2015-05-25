@@ -3,11 +3,10 @@ module.exports = function browserify(grunt) {
 
     return {
         build: {
-            files: {
-                '.build/js/main.js': ['public/js/main.js']
-            },
+            src: ['public/js/main.js'],
+            dest: '.build/js/main.js',
             options: {
-                transform: ['babelify']
+                transform: ['browserify-shim', 'babelify']
             }
         }
     };
