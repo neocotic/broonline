@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function less(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
 

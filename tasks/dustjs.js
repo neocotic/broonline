@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function dustjs(grunt) {
     grunt.loadNpmTasks('grunt-dustjs');
 

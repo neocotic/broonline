@@ -1,0 +1,13 @@
+{
+    "env": {
+        "browser": true,
+        "node": false
+    },
+    "globals": {
+        "FreshWidget": false,
+        "google": false
+    },
+    "rules": {
+        "no-console": true
+    }
+}

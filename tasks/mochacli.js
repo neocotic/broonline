@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function mochacli(grunt) {
     grunt.loadNpmTasks('grunt-mocha-cli');
 

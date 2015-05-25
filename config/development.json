@@ -46,6 +46,11 @@
                         "copier": {
                             "module": "kraken-devtools/plugins/copier",
                             "files": "**/*"
+                        },
+                        "browserify": {
+                            "module": "kraken-devtools-browserify",
+                            "files": "/js/**/*.js",
+                            "transform": ["babelify"]
                         }
                     }
                 ]

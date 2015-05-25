@@ -1,13 +1,36 @@
-'use strict';
+import 'bootstrap';
 
-define([
-    'jquery',
-    'bootstrap',
-    'https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js'
-], function($) {
+/**
+ * TODO: doc
+ *
+ * @class SiteLinks
+ */
+export class SiteLinks {
 
-    function SiteLinks(options) {
-        this.$el = options.$el;
+    /**
+     * TODO: doc
+     *
+     * @type {jQuery}
+     * @property $el
+     */
+    $el;
+
+    /**
+     * TODO: doc
+     *
+     * @type {HTMLElement}
+     * @property el
+     */
+    el;
+
+    /**
+     * TODO: doc
+     *
+     * @param {jQuery} $el -
+     * @constructor
+     */
+    constructor($el) {
+        this.$el = $el;
         this.el = this.$el[0];
 
         FreshWidget.init('', {
@@ -16,6 +39,7 @@ define([
             alignment: '4',
             offset: '-1500px',
             formHeight: '500px',
+            screenshot: 'no',
             url: 'https://thebroonline.freshdesk.com'
         });
 
@@ -24,25 +48,28 @@ define([
             placement: 'bottom'
         });
 
-        this.$el.on('click', '.navbar-link-support', $.proxy(function(event) {
+        this.$el.on('click', '.navbar-link-support', (event) => {
             event.preventDefault();
 
             this.showFeedback();
-        }, this));
+        });
     }
 
-    SiteLinks.prototype.hideFeedback = function() {
+    /**
+     * TODO: doc
+     *
+     * @method hideFeedback
+     */
+    hideFeedback() {
         FreshWidget.close();
+    }
 
-        return this;
-    };
-
-    SiteLinks.prototype.showFeedback = function() {
+    /**
+     * TODO: doc
+     *
+     * @method showFeedback
+     */
+    showFeedback() {
         FreshWidget.show();
-
-        return this;
-    };
-
-    return SiteLinks;
-
-});
+    }
+}

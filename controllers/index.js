@@ -1,19 +1,50 @@
-'use strict';
+/* eslint new-cap: [2, {"capIsNewExceptions": ["TXTtoWeb", "XMLtoWeb"]}] */
 
-var moment = require('moment');
-var sitemap = require('express-sitemap');
+import moment from 'moment';
+import sitemap from 'express-sitemap';
 
-var IndexModel = require('../models/index');
-var PlaceModel = require('../models/place');
+import IndexModel from '../models/index';
+import PlaceModel from '../models/place';
 
-module.exports = function(router) {
+/**
+ * TODO: doc
+ *
+ * @param {Object} req -
+ * @param {function} callback -
+ * @returns {Promise}
+ */
+function getSiteMap(req, callback) {
+    return PlaceModel.findLastModified((error, place) => {
+        if (error) {
+            return callback(error);
+        }
 
-    router.get('/', function(req, res) {
+        let lastModified = moment.utc(place && place.dates.modified);
+
+        callback(null, sitemap({
+            url: req.hostname,
+            map: {
+                '/': ['get']
+            },
+            route: {
+                '/': {
+                    changefreq: 'always',
+                    lastmod: lastModified.format(),
+                    priority: 1
+                }
+            },
+            sitemapSubmission: '/sitemap.xml'
+        }));
+    });
+}
+
+export default function(router) {
+    router.get('/', (req, res) => {
         res.render('index', new IndexModel());
     });
 
-    router.get('/robots.txt', function(req, res) {
-        getSiteMap(req, function(error, siteMap) {
+    router.get('/robots.txt', (req, res) => {
+        getSiteMap(req, (error, siteMap) => {
             if (error) {
                 throw error;
             }
@@ -22,8 +53,8 @@ module.exports = function(router) {
         });
     });
 
-    router.get('/sitemap.xml', function(req, res) {
-        getSiteMap(req, function(error, siteMap) {
+    router.get('/sitemap.xml', (req, res) => {
+        getSiteMap(req, (error, siteMap) => {
             if (error) {
                 throw error;
             }
@@ -31,29 +62,4 @@ module.exports = function(router) {
             siteMap.XMLtoWeb(res);
         });
     });
-
-    function getSiteMap(req, callback) {
-        PlaceModel.findLastModified(function(error, place) {
-            if (error) {
-                return callback(error);
-            }
-
-            var lastModified = moment.utc(place && place.dates.modified);
-
-            callback(null, sitemap({
-                url: req.hostname,
-                map: {
-                    '/': ['get']
-                },
-                route: {
-                    '/': {
-                        changefreq: 'always',
-                        lastmod: lastModified.format(),
-                        priority: 1
-                    }
-                },
-                sitemapSubmission: '/sitemap.xml'
-            }));
-        });
-    }
-};
+}

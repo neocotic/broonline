@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function localizr(grunt) {
     grunt.loadNpmTasks('grunt-localizr');
 

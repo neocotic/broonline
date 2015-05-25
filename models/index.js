@@ -1,5 +1,7 @@
-'use strict';
-
-module.exports = function IndexModel() {
-    return {};
-};
+/**
+ * TODO: doc
+ *
+ * @class IndexModel
+ */
+export class IndexModel {
+}

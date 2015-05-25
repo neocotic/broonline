@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function copyto(grunt) {
     grunt.loadNpmTasks('grunt-copy-to');
 

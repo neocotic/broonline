@@ -1,11 +1,8 @@
-'use strict';
+import PlaceModel from '../../../models/place';
 
-var PlaceModel = require('../../../models/place');
-
-module.exports = function(router) {
-
-    router.get('/heatmap', function(req, res) {
-        PlaceModel.find({ dominant: 'yes' }, function(error, places) {
+export default function(router) {
+    router.get('/heatmap', (req, res) => {
+        PlaceModel.find({dominant: 'yes'}, (error, places) => {
             if (error) {
                 throw error;
             }
@@ -14,28 +11,28 @@ module.exports = function(router) {
         });
     });
 
-    router.get('/:place', function(req, res) {
-        var id = req.params.place;
+    router.get('/:place', (req, res) => {
+        let id = req.params.place;
 
-        PlaceModel.findById(id, function(error, place) {
+        PlaceModel.findById(id, (error, place) => {
             if (error) {
                 throw error;
             }
 
             if (!place) {
-                place = new PlaceModel({ _id: id });
+                place = new PlaceModel({_id: id});
             }
 
             res.send(place);
         });
     });
 
-    router.post('/:place/answer', function(req, res) {
-        var answer = (req.body.answer === 'true');
-        var position = (req.body.position || {});
-        var id = req.params.place;
+    router.post('/:place/answer', (req, res) => {
+        let answer = req.body.answer === 'true';
+        let position = req.body.position || {};
+        let id = req.params.place;
 
-        PlaceModel.findById(id, function(error, place) {
+        PlaceModel.findById(id, (error, place) => {
             if (error) {
                 throw error;
             }
@@ -50,7 +47,7 @@ module.exports = function(router) {
                 });
             }
 
-            place.saveAnswer(answer, function(error) {
+            place.saveAnswer(answer, (error) => {
                 if (error) {
                     throw error;
                 }
@@ -59,5 +56,4 @@ module.exports = function(router) {
             });
         });
     });
-
-};
+}
