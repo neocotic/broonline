@@ -1,11 +1,11 @@
 {
-    "name": "thebroonline",
+    "name": "broonline",
     "version": "0.1.0",
     "description": "Fun project for tracking the use of brown sauce at chip shops",
-    "homepage": "http://www.thebroonline.com",
+    "homepage": "http://broonline.skelp.io",
     "private": true,
     "bugs": {
-        "url": "https://github.com/neocotic/thebrronline.com/issues"
+        "url": "https://github.com/Skelp/broonline/issues"
     },
     "authors": [
         {
@@ -24,7 +24,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/neocotic/thebroonline.com.git"
+        "url": "git://github.com/Skelp/broonline.git"
     },
     "dependencies": {
         "bootstrap": "3.3.4",

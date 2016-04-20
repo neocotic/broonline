@@ -24,12 +24,12 @@ describe('/', function() {
         mock.close(done);
     });
 
-    it('should say "the broon line"', function (done) {
+    it('should say "broon line"', function (done) {
         request(mock)
             .get('/')
             .expect(200)
             .expect('Content-Type', /html/)
-            .expect(/the broon line/)
+            .expect(/broon line/)
             .end(function(err, res) {
                 done(err);
             });

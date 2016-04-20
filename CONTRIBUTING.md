@@ -1,6 +1,6 @@
 # Contributing
 
-If you have any questions about [thebroonline.com][0] please feel free to [raise an issue][2].
+If you have any questions about [broon line][0] please feel free to [raise an issue][2].
 
 Please [search existing issues][1] for the same feature and/or issue before raising a new issue. Commenting on an
 existing issue is usually preferred over raising duplicate issues.
@@ -10,12 +10,11 @@ Ensure that all files confirm to the coding standards. This can be done easily v
 ``` bash
 # install/update package dependencies
 $ npm install
-$ bower install
 # run test suite
 $ grunt test
 ```
 
-You will need to have [node.js][3] for this, but you should also need to install (if you haven't done so already) the
+You will need to have [Node.js][3] for this, but you should also need to install (if you haven't done so already) the
 [Grunt][4] and [Bower][5] command-line tools:
 
 ``` bash
@@ -29,10 +28,10 @@ All pull requests should be made to the `develop` branch.
 Don't forget to add your details to the list of [AUTHORS.md][6] if you want your contribution to be recognized by
 others.
 
-[0]: https://github.com/neocotic/thebroonline.com
-[1]: https://github.com/neocotic/thebroonline.com/issues
-[2]: https://github.com/neocotic/thebroonline.com/issues/new
+[0]: https://github.com/Skelp/broonline
+[1]: https://github.com/Skelp/broonline/issues
+[2]: https://github.com/Skelp/broonline/issues/new
 [3]: http://nodejs.org
 [4]: http://gruntjs.com
 [5]: http://bower.io
-[6]: https://github.com/neocotic/thebroonline.com/blob/master/AUTHORS.md
+[6]: https://github.com/Skelp/broonline/blob/master/AUTHORS.md
