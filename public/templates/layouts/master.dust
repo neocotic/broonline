@@ -36,7 +36,7 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u={host|uc}" class="navbar-link navbar-link-facebook hidden-xs" title="{@pre type="content" key="navbar.facebook"/}"><i class="fa fa-facebook-square fa-2x"></i></a>
                 <a href="https://plus.google.com/share?url={host|uc}" class="navbar-link navbar-link-google-plus hidden-xs" title="{@pre type="content" key="navbar.googleplus"/}"><i class="fa fa-google-plus-square fa-2x"></i></a>
                 <a href="https://www.stumbleupon.com/submit?url={host|uc}" class="navbar-link navbar-link-stumbleupon hidden-xs" title="{@pre type="content" key="navbar.stumbleupon"/}"><i class="fa fa-stumbleupon-circle fa-2x"></i></a>
-                <a href="https://github.com/neocotic/thebroonline.com" class="navbar-link navbar-link-github hidden-xs" title="{@pre type="content" key="navbar.github"/}"><i class="fa fa-github fa-2x"></i></a>
+                <a href="https://github.com/Skelp/broonline" class="navbar-link navbar-link-github hidden-xs" title="{@pre type="content" key="navbar.github"/}"><i class="fa fa-github fa-2x"></i></a>
                 <a href="#" data-toggle="modal" data-target="#info-dialog" class="navbar-link navbar-link-info" title="{@pre type="content" key="navbar.info"/}"><i class="fa fa-info-circle fa-2x"></i></a>
                 <a href="https://thebroonline.freshdesk.com" class="navbar-link navbar-link-support" title="{@pre type="content" key="navbar.support"/}"><i class="fa fa-life-ring fa-2x"></i></a>
             </p>
