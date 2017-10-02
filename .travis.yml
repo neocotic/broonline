@@ -1,7 +1,4 @@
+sudo: false
 language: node_js
 node_js:
-- '0.12'
-notifications:
-  slack:
-    rooms:
-      secure: swgLhOcE6ShoRmFcVKcMdWD5nb3STb0zxsdhnu0DRaQQvkDTgFAzcHEWSm5FRS7QeAH2qTaYpeiq9QSvPkjylVwISiplbObN87Mou0Om1NK4B2zkl7AoEjrI5EeQyjxE1iPfahrfewhjf7jZTA+/HJBpd5a5RdXvBnWdAwHkjsg=
+  - "0.12"

@@ -1,10 +1,10 @@
-# broon line
+# broonline
 
 Fun project for tracking the use of broon sauce at chippies.
 
-[![Build Status](https://img.shields.io/travis/Skelp/broonline/develop.svg?style=flat-square)](https://travis-ci.org/Skelp/broonline)
-[![Dependency Status](https://img.shields.io/david/Skelp/broonline.svg?style=flat-square)](https://david-dm.org/Skelp/broonline)
-[![Dev Dependency Status](https://img.shields.io/david/dev/Skelp/broonline.svg?style=flat-square)](https://david-dm.org/Skelp/broonline#info=devDependencies)
+[![Build Status](https://img.shields.io/travis/neocotic/broonline/develop.svg?style=flat-square)](https://travis-ci.org/neocotic/broonline)
+[![Dependency Status](https://img.shields.io/david/neocotic/broonline.svg?style=flat-square)](https://david-dm.org/neocotic/broonline)
+[![Dev Dependency Status](https://img.shields.io/david/dev/neocotic/broonline.svg?style=flat-square)](https://david-dm.org/neocotic/broonline#info=devDependencies)
 
 ## Install
 
@@ -51,7 +51,7 @@ You'll need to have the following environment variables set;
 Once you've done all of that, you can just checkout the code and then install it with the following commands;
 
 ``` bash
-$ git clone https://github.com/Skelp/broonline.git
+$ git clone https://github.com/neocotic/broonline.git
 $ cd broonline
 $ npm install
 ```
@@ -68,17 +68,14 @@ $ node index.js
 
 If you want to contribute to the website (legend!), please make sure you read through the following documentation first;
 
-https://github.com/Skelp/broonline/raw/master/CONTRIBUTING.md
+https://github.com/neocotic/broonline/raw/master/CONTRIBUTING.md
 
 ## Bugs
 
 If you have any problems with the website or would like to see the changes currently in development you can do so here;
 
-https://github.com/Skelp/broonline/issues
+https://github.com/neocotic/broonline/issues
 
 ## License
 
-See [LICENSE.md](https://github.com/Skelp/broonline/raw/master/LICENSE.md) for more information on our MIT license.
-
-© 2016 [Skelp](http://skelp.io)
-<img align="right" width="16" height="16" src="https://raw.githubusercontent.com/Skelp/skelp-branding/master/assets/logo/base/skelp-logo-16x16.png">
+See [LICENSE.md](https://github.com/neocotic/broonline/raw/master/LICENSE.md) for more information on our MIT license.

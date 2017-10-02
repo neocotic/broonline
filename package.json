@@ -2,22 +2,17 @@
     "name": "broonline",
     "version": "0.1.0",
     "description": "Fun project for tracking the use of brown sauce at chip shops",
-    "homepage": "http://broonline.skelp.io",
+    "homepage": "https://broonline.neocotic.com",
     "private": true,
     "bugs": {
-        "url": "https://github.com/Skelp/broonline/issues"
+        "url": "https://github.com/neocotic/broonline/issues"
     },
     "author": {
         "name": "Alasdair Mercer",
         "email": "mercer.alasdair@gmail.com",
-        "url": "http://neocotic.com"
+        "url": "https://neocotic.com"
     },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/Skelp/broonline/raw/master/LICENSE.md"
-        }
-    ],
+    "license": "MIT",
     "keywords": [
         "brown",
         "broon",
@@ -27,7 +22,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/Skelp/broonline.git"
+        "url": "https://github.com/neocotic/broonline.git"
     },
     "dependencies": {
         "adaro": "0.1.10",
